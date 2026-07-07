@@ -1,0 +1,1146 @@
+<!-- LogIn Attempt Validation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>LogIn Attempt Validation</title>
+</head>
+<body>
+<script>
+let password = "1234";
+let enterPassword;
+let attempts = 0;
+
+while (attempts < 3) {
+    enterPassword = prompt("Enter your password:");
+    //  enterPassword = Number(prompt("Enter password"));
+
+    if (enterPassword === password) {
+        alert("Login Successful");
+        break;
+    } else {
+        attempts++;
+        alert("Wrong password. Try again");
+    }
+
+    if (attempts === 3) {
+        alert("Account Locked.");
+    }
+}
+
+</script>
+</body>
+</html> -->
+
+
+//School Marks Entry
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title> School Marks Entry</title>
+</head>
+<body>
+<script>
+    let totalMarks=0;
+    let passCount=0;
+    let average;
+    
+
+    for(let student=1; student<=10; student++){
+        let marks=Number(prompt("Enter Your Marks"+" "+"Student"+" "+student))
+
+        totalMarks=totalMarks+marks;
+        if (marks>50){
+            passCount++
+        }
+        average=totalMarks/10
+
+    }
+    alert("TotalMarks of 10 Students:"+totalMarks);
+    alert("Average is"+" "+average);
+    alert("PassCount:"+passCount)
+
+</script>
+</body>
+</html> -->
+
+
+
+
+ <!-- //ATM Cash
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+let balance=50000;
+let choice;
+
+while(balance>0){
+    let withdrawal = Number(prompt("Enter Your Amount."));
+
+    if (withdrawal>balance){
+        alert("Insufficient Balance");
+        balance++
+        
+    }
+
+    else{
+        balance=balance-withdrawal
+        alert("Withrawal Successfull")
+        alert("Remaining Balance:"+balance)
+        
+    }
+
+    choice = prompt("Do you want to continue? (Yes/no)");
+
+    if (choice === "no") {
+        alert("User Exited");
+        break;
+    }
+}
+
+if(balance===0){
+    alert("User exits")
+}
+</script>
+
+</body>
+</html>  -->
+
+
+<!-- //File Upload System
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>File Upload System</title>
+</head>
+<body>
+    <script>
+
+let file;
+
+for(file=1; file<=5; file++){
+        let fileSize=Number(prompt("Enter File Size"+" "+file));
+    if(fileSize>5){
+        alert("Rejected")
+    }
+    else{
+        alert("File Added")
+    }
+
+    let chocie=prompt("Do you want to add more file? (Yes/no)")
+
+    if (chocie==="no"){
+        alert("Thank You")
+    break;
+    }
+
+
+
+}
+</script>
+
+</body>
+</html> 
+ -->
+
+
+<!-- //Warehouse Stock Audit
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Warehouse Stock Audit</title>
+</head>
+<body>
+
+<script>
+
+let totalQuantity = 0;
+
+for (let i = 1; i <= 2; i++) {
+
+    let productName = prompt("Enter Product Name");
+    let quantity = Number(prompt("Enter quantity of " + productName));
+    let reorderLevel = Number(prompt("Enter reorder level of " + productName));
+
+    totalQuantity = totalQuantity + quantity;
+
+    if (quantity < reorderLevel) {
+        alert("Low Stock: " + productName);
+    }
+    else {
+        alert("Available: " + productName);
+    }
+}
+
+alert("Total Quantity: " + totalQuantity);
+
+</script>
+
+</body>
+</html> -->
+
+
+//EMI Reminder
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EMI Reminder</title>
+</head>
+<body>
+
+<script>
+    let emiAmount=Number(prompt("Enter EMI Amount"))
+
+    for(let month=1; month<=12; month++){
+        alert("Month:"+" "+month+" "
+            +"Emi Due"+" "+emiAmount+"Rs."
+        )
+    }
+
+    alert("12 Month EMI Reminder")
+
+
+</script>
+
+</body>
+</html> -->
+
+
+<!-- //Exam Result Processing
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exam Result Processing</title>
+</head>
+<body>
+
+<script>
+    let passCount=0;
+    let failCount=0;
+    let highestMarks=0;
+    let lowestMarks=0;
+
+    for(let student=1; student<=10; student++){
+        let marks=Number(prompt("Enter Marks"))
+
+        if(marks>50){
+            passCount++
+        }
+        else{
+            failCount++;
+        }
+        
+
+        if(marks>highestMarks){
+            highestMarks=marks;
+
+        }
+        else{
+            lowestMarks=marks
+        }
+    }
+    alert("Pass:"+passCount);
+    alert("Fail:"+failCount);
+    alert("HighestMarks:"+highestMarks);
+    alert("LowestMarks:"+lowestMarks)
+
+
+</script>
+
+</body>
+</html> -->
+
+
+ <!-- //Resturent Table Management System
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Resturent Table Management System</title>
+</head>
+<body>
+<script>
+
+
+let freeTable=0;
+
+for(let table=1; table<=10; table++){
+    let status=prompt("Table:"+table+"(Available/occupied)");
+    if(status==="available"){
+        alert("Table Available")
+        freeTable++
+    }   
+    else{
+        alert("Table Occupied")
+    }
+}
+alert("FreeTables:"+freeTable)
+
+</script>
+</body>
+</html> -->
+
+<!-- // Payroll Processing
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> Payroll Processing</title>
+</head>
+<body>
+<script>
+
+let totalExpense=0;
+
+for(let employee=1; employee<=5; employee++){
+    let salary=Number(prompt("Enter salary"+" "+employee))
+    let status=prompt("Is employee active? Yes/no")
+
+    if(status==="no"){
+        continue;
+    }
+    totalExpense=totalExpense+salary
+}
+alert("Total Salary Expense: Rs." + totalExpense);
+
+</script>
+</body>
+</html>  -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Bus Reservation System</title>
+</head>
+<body>
+
+<script>
+
+
+
+let seats = [];
+let bookedCount = 0;
+
+// Create 40 seats
+for (let i = 0; i < 40; i++) {
+    seats[i] = "Available";
+}
+
+while (bookedCount < 40) {
+
+    let availableSeats = "";
+
+    for (let i = 0; i < seats.length; i++) {
+
+        if (seats[i] === "Available") {
+            availableSeats += (i + 1) + " ";
+        }
+    }
+
+    let seatCount = Number(
+        prompt(
+            "Available Seats:\n" +
+            availableSeats +
+            "\n\nHow many seats do you want to book?\n(0 to Exit)"
+        )
+    );
+
+    if (seatCount === 0) {
+        alert("Booking Cancelled");
+        break;
+    }
+
+    for (let i = 1; i <= seatCount; i++) {
+
+        let seatNumber = Number(
+            prompt(
+                "Enter Seat Number " + i
+            )
+        );
+
+        if (seatNumber < 1 || seatNumber > 40) {
+
+            alert("Invalid Seat Number");
+            i--; // ask again
+            continue;
+        }
+
+        let index = seatNumber - 1;
+
+        if (seats[index] === "Booked") {
+
+            alert(
+                "Seat " +
+                seatNumber +
+                " is already booked"
+            );
+
+            i--; // ask again
+        }
+        else {
+
+            seats[index] = "Booked";
+            bookedCount++;
+
+            alert(
+                "Seat " +
+                seatNumber +
+                " booked successfully"
+            );
+        }
+
+        if (bookedCount === 40) {
+
+            alert("Bus Full");
+            break;
+        }
+    }
+
+    if (bookedCount === 40) {
+        break;
+    }
+}
+
+console.log("Final Seat Status");
+
+for (let i = 0; i < seats.length; i++) {
+
+    console.log(
+        "Seat " +
+        (i + 1) +
+        " : " +
+        seats[i]
+    );
+}
+
+
+
+</script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Bus Reservation System</title>
+</head>
+<body>
+
+<script>
+
+let seats = [];
+let bookingHistory = [];
+
+const TOTAL_SEATS = 40;
+const TICKET_PRICE = 1500;
+
+for (let i = 0; i < TOTAL_SEATS; i++) {
+
+    seats[i] = {
+        status: "Available",
+        name: "",
+        gender: ""
+    };
+}
+
+while (true) {
+
+    let choice = prompt(
+        "===== BUS RESERVATION =====\n\n" +
+        "1. View Seats\n" +
+        "2. Book Seats\n" +
+        "3. Cancel Booking\n" +
+        "4. Search Passenger\n" +
+        "5. Statistics\n" +
+        "6. Booking History\n" +
+        "7. Exit"
+    );
+
+    switch (choice) {
+
+        case "1":
+
+            let seatView = "";
+
+            for (let i = 0; i < seats.length; i++) {
+
+                seatView +=
+                    "Seat " +
+                    (i + 1) +
+                    " : " +
+                    seats[i].status +
+                    "\n";
+            }
+
+            alert(seatView);
+            break;
+
+        case "2":
+
+            let count = Number(
+                prompt("How many seats to book?")
+            );
+
+            let totalAmount = 0;
+
+            for (let i = 1; i <= count; i++) {
+
+                let seatNumber = Number(
+                    prompt(
+                        "Enter Seat Number"
+                    )
+                );
+
+                let index = seatNumber - 1;
+
+                if (
+                    seatNumber < 1 ||
+                    seatNumber > 40
+                ) {
+
+                    alert(
+                        "Invalid Seat Number"
+                    );
+
+                    i--;
+                    continue;
+                }
+
+                if (
+                    seats[index].status ===
+                    "Booked"
+                ) {
+
+                    alert(
+                        "Seat Already Booked"
+                    );
+
+                    i--;
+                    continue;
+                }
+
+                let name = prompt(
+                    "Passenger Name"
+                );
+
+                let gender = prompt(
+                    "Gender"
+                );
+
+                seats[index].status =
+                    "Booked";
+
+                seats[index].name =
+                    name;
+
+                seats[index].gender =
+                    gender;
+
+                totalAmount +=
+                    TICKET_PRICE;
+
+                bookingHistory.push(
+                    "Seat " +
+                    seatNumber +
+                    " - " +
+                    name
+                );
+            }
+
+            alert(
+                "Booking Successful\n" +
+                "Total Amount: Rs." +
+                totalAmount
+            );
+
+            break;
+
+        case "3":
+
+            let cancelSeat =
+                Number(
+                    prompt(
+                        "Enter Seat Number"
+                    )
+                );
+
+            let cancelIndex =
+                cancelSeat - 1;
+
+            if (
+                seats[cancelIndex]
+                    .status === "Booked"
+            ) {
+
+                seats[cancelIndex] = {
+
+                    status:
+                        "Available",
+
+                    name: "",
+
+                    gender: ""
+                };
+
+                alert(
+                    "Booking Cancelled"
+                );
+            }
+            else {
+
+                alert(
+                    "Seat Already Available"
+                );
+            }
+
+            break;
+
+        case "4":
+
+            let searchName =
+                prompt(
+                    "Enter Passenger Name"
+                );
+
+            let found = false;
+
+            for (
+                let i = 0;
+                i < seats.length;
+                i++
+            ) {
+
+                if (
+                    seats[i].name
+                        .toLowerCase() ===
+                    searchName
+                        .toLowerCase()
+                ) {
+
+                    alert(
+                        "Passenger Found\n" +
+                        "Seat: " +
+                        (i + 1)
+                    );
+
+                    found = true;
+
+                    break;
+                }
+            }
+
+            if (!found) {
+
+                alert(
+                    "Passenger Not Found"
+                );
+            }
+
+            break;
+
+        case "5":
+
+            let booked = 0;
+
+            for (
+                let i = 0;
+                i < seats.length;
+                i++
+            ) {
+
+                if (
+                    seats[i].status ===
+                    "Booked"
+                ) {
+
+                    booked++;
+                }
+            }
+
+            let available =
+                TOTAL_SEATS - booked;
+
+            let occupancy =
+                (
+                    booked /
+                    TOTAL_SEATS
+                ) * 100;
+
+            alert(
+                "Total Seats: " +
+                TOTAL_SEATS +
+                "\nBooked: " +
+                booked +
+                "\nAvailable: " +
+                available +
+                "\nOccupancy: " +
+                occupancy.toFixed(2) +
+                "%"
+            );
+
+            break;
+
+        case "6":
+
+            let history = "";
+
+            for (
+                let i = 0;
+                i <
+                bookingHistory.length;
+                i++
+            ) {
+
+                history +=
+                    bookingHistory[i] +
+                    "\n";
+            }
+
+            alert(
+                history ||
+                "No Bookings Yet"
+            );
+
+            break;
+
+        case "7":
+
+            alert(
+                "Thank You"
+            );
+
+            break;
+
+        default:
+
+            alert(
+                "Invalid Choice"
+            );
+    }
+
+    if (choice === "7") {
+        break;
+    }
+}
+
+</script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<title>Bus Reservation System</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    padding:20px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+}
+
+.bus{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+.seat-container{
+    display:grid;
+    grid-template-columns:repeat(4,70px);
+    gap:15px 25px;
+    justify-content:center;
+}
+
+.seat{
+    width:70px;
+    height:70px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.available{
+    background:#d4edda;
+}
+
+.selected{
+    background:orange;
+}
+
+.booked{
+    background:#dc3545;
+    color:white;
+    cursor:not-allowed;
+}
+
+.controls{
+    margin-top:20px;
+    text-align:center;
+}
+
+input{
+    padding:10px;
+    width:250px;
+}
+
+button.action{
+    padding:10px 15px;
+    margin:5px;
+}
+
+.summary{
+    margin-top:20px;
+    background:white;
+    padding:15px;
+    border-radius:10px;
+}
+
+.history{
+    margin-top:20px;
+    background:white;
+    padding:15px;
+    border-radius:10px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>🚌 Bus Reservation System</h1>
+
+<div class="bus">
+
+<div class="seat-container" id="seatContainer"></div>
+
+<div class="controls">
+
+<input
+type="text"
+id="passengerName"
+placeholder="Passenger Name">
+
+<br><br>
+
+<button class="action" onclick="bookSeats()">
+Book Selected Seats
+</button>
+
+<button class="action" onclick="cancelBooking()">
+Cancel Booking
+</button>
+
+</div>
+
+</div>
+
+<div class="summary">
+
+<h3>Booking Summary</h3>
+
+<p>Total Seats: 40</p>
+
+<p id="availableCount"></p>
+
+<p id="bookedCount"></p>
+
+<p id="amount"></p>
+
+</div>
+
+<div class="history">
+
+<h3>Booking History</h3>
+
+<ul id="history"></ul>
+
+</div>
+
+</div>
+
+<script>
+
+const TOTAL_SEATS = 40;
+const PRICE_PER_SEAT = 1500;
+
+let seats = [];
+let selectedSeats = [];
+let bookingHistory = [];
+
+const seatContainer =
+document.getElementById("seatContainer");
+
+for(let i=1;i<=TOTAL_SEATS;i++){
+
+    seats.push({
+        seatNo:i,
+        status:"Available",
+        passenger:""
+    });
+
+    const seatBtn =
+    document.createElement("button");
+
+    seatBtn.innerText = i;
+
+    seatBtn.classList.add(
+        "seat",
+        "available"
+    );
+
+    seatBtn.dataset.seat = i;
+
+    seatBtn.addEventListener(
+        "click",
+        function(){
+            selectSeat(i);
+        }
+    );
+
+    seatContainer.appendChild(seatBtn);
+}
+
+function selectSeat(seatNo){
+
+    const seat =
+    seats[seatNo-1];
+
+    if(seat.status==="Booked"){
+        alert("Seat already booked");
+        return;
+    }
+
+    const btn =
+    document.querySelector(
+        `[data-seat="${seatNo}"]`
+    );
+
+    if(selectedSeats.includes(seatNo)){
+
+        selectedSeats =
+        selectedSeats.filter(
+            s => s !== seatNo
+        );
+
+        btn.classList.remove(
+            "selected"
+        );
+
+        btn.classList.add(
+            "available"
+        );
+    }
+    else{
+
+        selectedSeats.push(seatNo);
+
+        btn.classList.remove(
+            "available"
+        );
+
+        btn.classList.add(
+            "selected"
+        );
+    }
+
+    updateSummary();
+}
+
+function bookSeats(){
+
+    let name =
+    document.getElementById(
+        "passengerName"
+    ).value;
+
+    if(name===""){
+        alert(
+            "Enter passenger name"
+        );
+        return;
+    }
+
+    if(selectedSeats.length===0){
+        alert(
+            "Select at least one seat"
+        );
+        return;
+    }
+
+    for(let seatNo of selectedSeats){
+
+        seats[seatNo-1].status =
+        "Booked";
+
+        seats[seatNo-1].passenger =
+        name;
+
+        const btn =
+        document.querySelector(
+            `[data-seat="${seatNo}"]`
+        );
+
+        btn.classList.remove(
+            "selected"
+        );
+
+        btn.classList.add(
+            "booked"
+        );
+
+        bookingHistory.push(
+            `${name} booked Seat ${seatNo}`
+        );
+    }
+
+    document.getElementById(
+        "history"
+    ).innerHTML =
+    bookingHistory
+    .map(item =>
+        `<li>${item}</li>`
+    )
+    .join("");
+
+    let total =
+    selectedSeats.length *
+    PRICE_PER_SEAT;
+
+    alert(
+        "Booking Successful\n\n" +
+        "Passenger: " + name +
+        "\nSeats: " +
+        selectedSeats.join(", ") +
+        "\nAmount: Rs." +
+        total
+    );
+
+    selectedSeats = [];
+
+    document.getElementById(
+        "passengerName"
+    ).value = "";
+
+    updateSummary();
+}
+
+function cancelBooking(){
+
+    let seatNo =
+    Number(
+        prompt(
+            "Enter seat number to cancel"
+        )
+    );
+
+    if(
+        seatNo < 1 ||
+        seatNo > TOTAL_SEATS
+    ){
+        alert("Invalid Seat");
+        return;
+    }
+
+    let seat =
+    seats[seatNo-1];
+
+    if(
+        seat.status !== "Booked"
+    ){
+        alert("Seat not booked");
+        return;
+    }
+
+    seat.status = "Available";
+    seat.passenger = "";
+
+    const btn =
+    document.querySelector(
+        `[data-seat="${seatNo}"]`
+    );
+
+    btn.className =
+    "seat available";
+
+    bookingHistory.push(
+        `Seat ${seatNo} cancelled`
+    );
+
+    document.getElementById(
+        "history"
+    ).innerHTML =
+    bookingHistory
+    .map(item =>
+        `<li>${item}</li>`
+    )
+    .join("");
+
+    updateSummary();
+
+    alert(
+        "Booking Cancelled"
+    );
+}
+
+function updateSummary(){
+
+    let booked =
+    seats.filter(
+        s => s.status==="Booked"
+    ).length;
+
+    let available =
+    TOTAL_SEATS - booked;
+
+    document.getElementById(
+        "availableCount"
+    ).innerText =
+    "Available Seats: " +
+    available;
+
+    document.getElementById(
+        "bookedCount"
+    ).innerText =
+    "Booked Seats: " +
+    booked;
+
+    document.getElementById(
+        "amount"
+    ).innerText =
+    "Selected Amount: Rs." +
+    (
+        selectedSeats.length *
+        PRICE_PER_SEAT
+    );
+}
+
+updateSummary();
+
+</script>
+
+</body>
+</html>
